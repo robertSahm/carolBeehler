@@ -1,21 +1,162 @@
 @import "normalize.less";
 
-@import "global-mobile.less";
+a {  }
+a:visited {  }
+a:hover {  }
+a:focus {  }
+a:hover, a:active { outline: 0; }
+//@import "global-mobile.less";
 
-/* ===== Primary Styles ========================================================
-   Author:
-   ========================================================================== */
+.noWrap {
+	white-space: nowrap;
+}
+
+/* ===== Color ================================================== */
+@redText: #EE3124;
+@blueText: #00AEC5;
+@greyText: #444;
 
 
 
 
+/* ===== Fonts ================================================== */
+@font-face {
+    font-family: 'MinionProMediumItalic';
+    src: url('fonts/minion_pro_medium_italic-webfont.eot');
+    src: url('fonts/minion_pro_medium_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/minion_pro_medium_italic-webfont.woff') format('woff'),
+         url('fonts/minion_pro_medium_italic-webfont.ttf') format('truetype');
+    
+}
+@font-face {
+    font-family: 'MinionRegular';
+    src: url('fonts/minion_regular-webfont.eot');
+    src: url('fonts/minion_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/minion_regular-webfont.woff') format('woff'),
+         url('fonts/minion_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinionSemiboldItalic';
+    src: url('fonts/minion_semibold_italic-webfont.eot');
+    src: url('fonts/minion_semibold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/minion_semibold_italic-webfont.woff') format('woff'),
+         url('fonts/minion_semibold_italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MinionDisplayRomanItalic';
+    src: url('fonts/miniondisplayitalic-webfont.eot');
+    src: url('fonts/miniondisplayitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/miniondisplayitalic-webfont.woff') format('woff'),
+         url('fonts/miniondisplayitalic-webfont.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+#headerContainer {
+	height: auto;
+	width: 100%;
+	height: 20%;
+	max-height: 220px;
+	top: 0;
+	left: 0;
+	.headerText {
+		margin-top: 10%;
+		margin-left: 10%;
+		width: 100%;
+		h1 {
+			float: left;
+			font-family: 'MinionRegular';
+			font-weight: 500;
+			font-size: 1.2em;
+			letter-spacing: .07em;
+			word-spacing: .1em;
+			text-transform: uppercase;
+			color: @redText;
+			padding-right: .4em;
+		}
+		h2#title {
+			float: left;
+			font-family: 'MinionDisplayRomanItalic';
+			font-weight: 100;
+			font-style: italic;
+			color: @blueText;
+			font-size: 1.5em;
+			letter-spacing: .02em;
+			word-spacing: .1em;
+			margin-top: 13px;
+
+		}
+	}
+	.topAddress {
+		float: right;
+		width: 100%;
+		text-align: center;
+			h3 {
+			float: right;
+			padding-right: 7%;
+			margin-left: 7%;
+			max-width: 570px;
+			//min-width: 480px;
+			font-family:  'Helvetica', 'arial', sans-serif;
+			font-size: .7em;
+			font-weight: 100;
+			color: @redText;
+			}
+			span.black {
+				color: black;
+				font-size: 1.3em;
+			}
+		}
+		.navBumper {
+			position: relative;
+			width: 20%;
+			height: 100em;
+			left: 0;
+			border: 1px solid red;
+
+			h3.navText {
+			font-family:  'Helvetica', 'arial', sans-serif;
+			text-transform: uppercase;
+			font-size: .8em;
+			font-weight: 100;
+
+			a {
+				color: @greyText;
+				text-decoration: none;
+
+				&:hover, &:active {
+					color: blue;
+					text-decoration: underline;
+					color: lighten(@greyText, 30%);
+				}
+			}		
+		}
+	}
+}
 
 
+#mainContainer {
+	#main {
+		.homeImage {
+			float: right;
+			margin: 0;
+			padding: 0;
+			width: 80%;
+			height: 100%;
 
+			img {
+				width: 100%;
+				height: 100%;
 
+			}
+			
+		}
+	}
+}
 
-
-
-@import "media-queries.less";
-@import "helpers.less";
-@import "print.less";
+//@import "media-queries.less";
+//@import "helpers.less";
+//@import "print.less";
