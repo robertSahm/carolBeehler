@@ -1,3 +1,18 @@
-<div class="homeImage">
-	<img src="img/homeImage.jpg" />
+
+<!--
+Loads home image of books
+-->
+
+<div id="homeImageWrapper">
+	<img class="homeImage" src="img/homeImage.jpg" />
 </div>
+
+
+<script>
+
+$(function() { 
+// Load home page image on document load 
+	$('div#homeImageWrapper').addClass("current");
+});
+
+</script>
