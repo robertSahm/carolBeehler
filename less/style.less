@@ -2,7 +2,7 @@
 
 a {  }
 a:visited {  }
-a:hover {  }
+a:hover { cursor: pointer; }
 a:focus {  }
 a:hover, a:active { outline: 0; }
 //@import "global-mobile.less";
@@ -165,6 +165,7 @@ body {
 			height: auto;
 			h3 {
 				padding-top: 25px;
+
 			}
 			.books a:hover {
 				color: @purpleText;
@@ -174,6 +175,9 @@ body {
 			}
 			.ephemera a:hover {
 				color: @greenText;
+			}
+			.selected {
+				font-weight: 800;
 			}
 		}
 	}
@@ -190,13 +194,10 @@ body {
 			padding: 0;
 			width: 81%;
 			
-
 			img.homeImage {
 				width: 100%;
 			}
 		}
-
-
 	}
 }
 
