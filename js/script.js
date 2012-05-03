@@ -1,11 +1,73 @@
 
 
 
+$(function() { 
+// Load home page image on document load 
+	$('#main').load('home.html');
+
+	//fades out visible divs in #main
+	$('.about').click(function() {
+		$('#main').load('about.html').hide().fadeIn(500);
+	
+		//$('#main:visible').fadeOut(400, function() {
+			// end animation
+		//});
+	});
+	$('.portfolio').click(function() {
+		$('#main').load('portfolio.html').hide().fadeIn(500);
+		$('.portfolioDropdown').slideToggle(600, function(){
+			// end animation
+		});
+	});
+	$('.books').click(function() {
+		$('#main').load('books.html').hide().fadeIn(500);
+	});
+	$('.brochures').click(function() {
+		$('#main').load('brochures.html').hide().fadeIn(500);
+	});
+	$('.ephemera').click(function() {
+		$('#main').load('ephemera.html').hide().fadeIn(500);
+	});
+	$('.clientList').click(function() {
+		$('#main').load('clientList.html').hide().fadeIn(500);
+	});
+});
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 //
 // Gentlemen, start your engines...
 //
@@ -47,13 +109,13 @@ $(function() {
 		
 	});
 
-*/
+
 
 
 
 });  
 
-
+*/
 
 
 
