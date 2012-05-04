@@ -3,33 +3,83 @@
 
 $(function() { 
 // Load home page image on document load 
-	$('#main').load('home.html');
+	$('#main').load('home.html').hide().fadeIn(700);
+
+	// fades out top-right address on all nav clicks
+	$('.navText a').click(function() {
+			$('.topAddress').fadeOut(700);
+		});
 
 	//fades out visible divs in #main
-	$('.about').click(function() {
-		$('#main').load('about.html').hide().fadeIn(500);
-	
-		//$('#main:visible').fadeOut(400, function() {
-			// end animation
-		//});
+	$('a.headerClick').click(function() {
+		$('#main').load('home.html').hide().fadeIn(700);
+		$('.topAddress').delay(700).fadeIn(700);
 	});
+
+	// about hover
+	/*$('.about a').hover(function() {
+		$(this).addClass('hoverNav')
+		.css("color", '#EE3124');
+
+	},
+	function () {
+		$(this).removeClass('hoverNav')
+		.css('color','#111');
+	});*/
+
+	// about click
+	$('.about a').click(function() {
+		$(this).addClass('hoverNav selected');
+			$(this).css('color','#EE3124');
+		//$(this)
+		$('.portfolioDropdown').slideUp(700, function(){
+			// end animation
+		}
+
+		);
+		$('#main').load('about.html').hide().fadeIn(700);
+	});
+
+	// portfolio click
 	$('.portfolio').click(function() {
-		$('#main').load('portfolio.html').hide().fadeIn(500);
-		$('.portfolioDropdown').slideToggle(600, function(){
+		// adds color on click
+		$('.portfolio a').addClass('hoverNav selected')
+		.css('color','#EE3124');
+		// fades in portfolio.html
+		$('#main').load('portfolio.html').hide().fadeIn(700);
+		$('.portfolioDropdown').slideToggle(700, function(){
+			// end animation
+		}
+
+		);
+	});
+
+	// books click
+	$('.books').click(function() {
+		$('.books a').addClass('textClick')
+		$('#main').load('books.html').hide().fadeIn(700);
+	});
+
+	// brochures click
+	$('.brochures').click(function() {
+		$('.brochures a').addClass('textClick')
+		$('#main').load('brochures.html').hide().fadeIn(700);
+	});
+
+	// ephemera click
+	$('.ephemera').click(function() {
+		$('.ephemera a').addClass('textClick')
+		$('#main').load('ephemera.html').hide().fadeIn(700);
+	});
+
+	// clientList click
+	$('.clientList').click(function() {
+		$('.clientList a').addClass('textClick')
+		$('#main').load('clientList.html').hide().fadeIn(700);
+		$('.portfolioDropdown').slideUp(700, function(){
 			// end animation
 		});
-	});
-	$('.books').click(function() {
-		$('#main').load('books.html').hide().fadeIn(500);
-	});
-	$('.brochures').click(function() {
-		$('#main').load('brochures.html').hide().fadeIn(500);
-	});
-	$('.ephemera').click(function() {
-		$('#main').load('ephemera.html').hide().fadeIn(500);
-	});
-	$('.clientList').click(function() {
-		$('#main').load('clientList.html').hide().fadeIn(500);
+
 	});
 });
 

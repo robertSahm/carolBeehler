@@ -1,6 +1,6 @@
 @import "normalize.less";
 
-a {  }
+a { text-decoration: none;}
 a:visited {  }
 a:hover { cursor: pointer; }
 a:focus {  }
@@ -25,6 +25,7 @@ body {
 @purpleText: #A484BB;
 @orangeText: #F0902F;
 @greenText: #8AC749;
+@greyBackground: #C7C1B7;
 
 /* ===== Fonts ================================================== */
 @font-face {
@@ -62,6 +63,23 @@ body {
     font-weight: 400;
     font-style: italic;
 }
+
+// Hover and clicked states for jQuery
+.hoverNav {
+	font-weight: 800;
+	color: red;
+}
+
+.clickNav {
+	font-weight: 800;	
+}
+
+.aboutClick {
+	color: red;
+}
+
+
+
 #headerContainer {
 	height: 5em;
 	width: 100%;
@@ -85,6 +103,9 @@ body {
 			color: @redText;
 			padding-right: .4em;
 			line-height: .1em;
+			a {
+				color: @redText;
+			}
 		}
 
 		h2#title {
@@ -98,6 +119,10 @@ body {
 			word-spacing: .1em;
 			line-height: .1em;
 			margin-top: 14px;
+
+			a {
+				color: @blueText;
+			}
 		}
 	}
 	.topAddress {
@@ -147,14 +172,21 @@ body {
 			//margin-left: 30%;
 			padding: 0;
 			margin: 0;
+
 			a {
 				color: @greyText;
+			   -webkit-transition:color .2s linear;  
+			   -moz-transition:color .2s linear;  
+			   -o-transition:color .2s linear;  
+			   	transition:color .2s linear;   
 				text-decoration: none;
 
-				&:hover, &:active {
+				&:hover {
 					color: @redText;
+
 					font-weight: 800;
 				}
+				
 			}		
 		}
 
@@ -165,6 +197,12 @@ body {
 			height: auto;
 			h3 {
 				padding-top: 25px;
+				a {
+					-webkit-transition:color .2s linear;  
+				   -moz-transition:color .2s linear;  
+				   -o-transition:color .2s linear;  
+				   	transition:color .2s linear; 
+				}
 
 			}
 			.books a:hover {
@@ -248,8 +286,53 @@ body {
 	}
 }
 
+.portfolioWrapper {
+	width: 100%;
+	
+	.backgroundGrey {
+		height: 275px;
+		background-color: @greyBackground;
+
+		.portLinkImage1 {
+			float: left;
+			height: 275px;
+			width: 403px;
+			border-right: 1px solid @redText;
+			img {
+				height: 198px;
+				width: 146px;
+				padding-left: 127px;
+				padding-top: 39px;
+			}
+		}
+
+	.portLinkImage2 {
+		float: left;
+		height: 275px;
+		width: 403px;
+		border-right: 1px solid @redText;
+		img {
+				padding-left: 138px;
+				padding-top: 46px;
+			}
+
+	}
+
+	.portLinkImage3 {
+		float: left;
+		height: 275px;
+		width: 400px;
+		img {
+				padding-top: 88px;
+				padding-left: 72px;
+			}
+
+	}
 
 
+
+}
+}
 
 
 
