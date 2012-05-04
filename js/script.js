@@ -1,6 +1,39 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(function() { 
 // Load home page image on document load 
 	$('#main').load('home.html').hide().fadeIn(700);
@@ -16,72 +49,108 @@ $(function() {
 		$('.topAddress').delay(700).fadeIn(700);
 	});
 
-	// about hover
-	/*$('.about a').hover(function() {
-		$(this).addClass('hoverNav')
-		.css("color", '#EE3124');
+	// About Click Stuff
+	$('a#about a').click()
+});
 
-	},
-	function () {
-		$(this).removeClass('hoverNav')
-		.css('color','#111');
-	});*/
+
+
+
+
+
+
+
+
+
+/*
+	// about hover
 
 	// about click
-	$('.about a').click(function() {
-		$(this).addClass('hoverNav selected');
-			$(this).css('color','#EE3124');
-		//$(this)
-		$('.portfolioDropdown').slideUp(700, function(){
+	$('li#about a').click(function() {
+		$(this).addClass('clickNavAbout');
+		alert('hollaatchaboy')
+		//$('.portfolio a, .books a, .brochures a, .ephemera a, .clientList a').addClass('clickNavReset');
+		$('.portfolioDropdown ul').slideUp(700, function(){
 			// end animation
-		}
+		});
 
-		);
+		// Loads about.html
 		$('#main').load('about.html').hide().fadeIn(700);
 	});
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	// portfolio click
-	$('.portfolio').click(function() {
+	$('#portfolio a').click(function() {
 		// adds color on click
-		$('.portfolio a').addClass('hoverNav selected')
-		.css('color','#EE3124');
+		$(this).addClass('clickNavPortfolio selected')
+		//$('.about a, .books a, .brochures a, .ephemera a, .clientList a').addClass('clickNavReset');
 		// fades in portfolio.html
 		$('#main').load('portfolio.html').hide().fadeIn(700);
-		$('.portfolioDropdown').slideToggle(700, function(){
+		$('ul.portfolioDropdown').slideToggle(700, function(){
 			// end animation
-		}
-
-		);
+		});
 	});
 
 	// books click
-	$('.books').click(function() {
-		$('.books a').addClass('textClick')
+	$('.books a').click(function() {
+		$(this).addClass('selected')
+		if(!$(this).hasClass('selected')).addClass('clickNavBooks');
+		//$('.about a, .portfolio a, .brochures a, .ephemera a, .clientList a').addClass('clickNavReset');
 		$('#main').load('books.html').hide().fadeIn(700);
 	});
 
 	// brochures click
-	$('.brochures').click(function() {
-		$('.brochures a').addClass('textClick')
+	$('.brochures a').click(function() {
+		$(this).addClass('clickNavBrochures selected')
+		//$('.about a, .portfolio a, .books a, .ephemera a, .clientList a').addClass('clickNavReset');
 		$('#main').load('brochures.html').hide().fadeIn(700);
 	});
 
 	// ephemera click
-	$('.ephemera').click(function() {
-		$('.ephemera a').addClass('textClick')
+	$('.ephemera a').click(function() {
+		$(this).addClass('clickNavEphemera selected')
+		//$('.about a, .portfolio a, .books a, brochures a, .clientList a').addClass('clickNavReset');
 		$('#main').load('ephemera.html').hide().fadeIn(700);
 	});
 
 	// clientList click
-	$('.clientList').click(function() {
-		$('.clientList a').addClass('textClick')
+	$('.clientList a').click(function() {
+		$(this).addClass('clickNavClientList selected')
 		$('#main').load('clientList.html').hide().fadeIn(700);
-		$('.portfolioDropdown').slideUp(700, function(){
+		//$('.about a, .portfolio a, .books a, brochures a, .ephemera a').addClass('clickNavReset');
+		$('.portfolioDropdown ul').slideUp(700, function(){
 			// end animation
 		});
-
 	});
-});
+}); // End all
 
 
 
@@ -167,7 +236,16 @@ $(function() {
 
 */
 
+	// about hover
+	/*$('.about a').hover(function() {
+		$(this).addClass('hoverNav')
+		.css("color", '#EE3124');
 
+	},
+	function () {
+		$(this).removeClass('hoverNav')
+		.css('color','#111');
+	});*/
 
 
 

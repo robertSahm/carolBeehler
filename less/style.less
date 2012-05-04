@@ -1,6 +1,6 @@
 @import "normalize.less";
 
-a { text-decoration: none;}
+a { text-decoration: none; }
 a:visited {  }
 a:hover { cursor: pointer; }
 a:focus {  }
@@ -65,18 +65,8 @@ body {
 }
 
 // Hover and clicked states for jQuery
-.hoverNav {
-	font-weight: 800;
-	color: red;
-}
 
-.clickNav {
-	font-weight: 800;	
-}
 
-.aboutClick {
-	color: red;
-}
 
 
 
@@ -125,11 +115,12 @@ body {
 			}
 		}
 	}
+
 	.topAddress {
 		float: right;
 		width: 100%;
 		text-align: center;
-			h3 {
+		h3 {
 			float: right;
 			padding: 0;
 			padding-right: 11%;
@@ -141,6 +132,7 @@ body {
 			letter-spacing: .01em;
 			font-weight: 100;
 			color: @redText;
+
 			span.black {
 				color: black;
 				font-size: 1.3em;
@@ -148,78 +140,119 @@ body {
 		}
 
 	}
-		.navBumper {
-			position: relative;
-			top: 80px;
-			width: 20%;
-			height: 51em;
-			left: 0;
-			ul {
-				padding-top: 110%;
-				margin-bottom: 50% !important;
+	.navBumper {
+		position: relative;
+		top: 80px;
+		width: 20%;
+		height: 51em;
+		left: 0;	
+		#mainNav {
+			padding-top: 110%;
 
-				li {
-					padding-top: 25px;
-					padding-left: 27%;
-				}
+			li {
+				height: auto;
+				
 			}
-			h3.navText {
-			font-family:  'Helvetica', 'arial', sans-serif;
-			text-transform: uppercase;
-			font-size: .73em;
-			letter-spacing: .06em;
-			font-weight: 100;
-			//margin-left: 30%;
-			padding: 0;
-			margin: 0;
-
+			h3 {
+				font-family:  'Helvetica', 'arial', sans-serif;
+				text-transform: uppercase;
+				font-size: .73em;
+				letter-spacing: .06em;
+				font-weight: 100;
+				//margin-left: 30%;
+				padding: 0;
+				margin: 0;
+			}
 			a {
 				color: @greyText;
-			   -webkit-transition:color .2s linear;  
-			   -moz-transition:color .2s linear;  
-			   -o-transition:color .2s linear;  
-			   	transition:color .2s linear;   
+			 	-webkit-transition:color .2s linear;  
+			 	-moz-transition:color .2s linear;  
+			 	-o-transition:color .2s linear;  
+			 	transition:color .2s linear;   
 				text-decoration: none;
+			}
+			li#about {
+				padding: 20px;
 
-				&:hover {
-					color: @redText;
+				a {
+				color: @greyText;
+				-webkit-transition:color .2s linear;  
+				-moz-transition:color .2s linear;  
+				-o-transition:color .2s linear;  
+				transition:color .2s linear;
+					
+					&:hover {
+						color: @redText;
+						font-weight: 800;
+					}
+				}
+			}
 
+			li#portfolio {
+				padding: 20px;
+
+				a {
+					color: @greyText;
+					-webkit-transition:color .2s linear;  
+					-moz-transition:color .2s linear;  
+					-o-transition:color .2s linear;  
+					transition:color .2s linear; 
+
+					&:hover {
+						color: @redText;
+						font-weight: 800;
+					}
+				}
+			}
+
+			li#portfolioDropdownLi {
+				height: auto;
+				margin: 0;
+				padding: 0;
+
+				ul {
+					margin: 0;
+					padding: 0;
+					
+					li#books {
+						padding: 20px 0 20px 45px;
+
+						a:hover {
+							color:@purpleText;
+							font-weight: 800;
+						}
+					}
+					
+					li#brochures {
+						padding: 20px 0 20px 45px;
+
+						a:hover {
+							color:@orangeText;
+							font-weight: 800;
+						}
+					}
+
+					li#ephemera {
+						padding: 20px 0 20px 45px;
+
+						a:hover {
+							color:@greenText;
+							font-weight: 800;
+						}
+					}
+				} // Portfolio Dropdown UL
+			} // Portfolio Dropdown LI
+			
+			li#clientList {
+				padding: 20px;
+				a:hover {
+					color:@redText;
 					font-weight: 800;
 				}
-				
-			}		
-		}
-
-		.portfolioDropdown {
-			padding-left: 15%;
-			display: none;
-			width: auto;
-			height: auto;
-			h3 {
-				padding-top: 25px;
-				a {
-					-webkit-transition:color .2s linear;  
-				   -moz-transition:color .2s linear;  
-				   -o-transition:color .2s linear;  
-				   	transition:color .2s linear; 
-				}
-
-			}
-			.books a:hover {
-				color: @purpleText;
-			}
-			.brochures a:hover {
-				color: @orangeText;
-			}
-			.ephemera a:hover {
-				color: @greenText;
-			}
-			.selected {
-				font-weight: 800;
 			}
 		}
-	}
-}
+	} // Nav Bumper
+} // Header Container
 
 
 #mainContainer {
@@ -239,7 +272,7 @@ body {
 	}
 }
 
-
+// About.html partial styles
 .aboutWrapper {
 	float: right;
 	width: 81%;
@@ -298,6 +331,7 @@ body {
 			height: 275px;
 			width: 403px;
 			border-right: 1px solid @redText;
+
 			img {
 				height: 198px;
 				width: 146px;
@@ -306,33 +340,29 @@ body {
 			}
 		}
 
-	.portLinkImage2 {
-		float: left;
-		height: 275px;
-		width: 403px;
-		border-right: 1px solid @redText;
-		img {
+		.portLinkImage2 {
+			float: left;
+			height: 275px;
+			width: 403px;
+			border-right: 1px solid @redText;
+
+			img {
 				padding-left: 138px;
 				padding-top: 46px;
 			}
+		}
 
-	}
-
-	.portLinkImage3 {
-		float: left;
-		height: 275px;
-		width: 400px;
-		img {
-				padding-top: 88px;
-				padding-left: 72px;
+		.portLinkImage3 {
+			float: left;
+			height: 275px;
+			width: 400px;
+				img {
+					padding-top: 88px;
+					padding-left: 72px;
+				}
 			}
-
+		}
 	}
-
-
-
-}
-}
 
 
 
@@ -348,3 +378,29 @@ body {
 //@import "media-queries.less";
 //@import "helpers.less";
 //@import "print.less";
+/*
+			.clickNavPortfolio {
+				font-weight: 800;
+				color: @redText;
+			} 
+			.clickNavBooks {
+				font-weight: 800;
+				color: @purpleText;
+			}
+			.clickNavBrochures {
+				font-weight: 800;
+				color: @orangeText;
+			}
+			.clickNavEphemera {
+				font-weight: 800;
+				color: @greenText;
+			}
+			.clickNavClientList {
+				font-weight: 800;
+				color: @redText;
+			}
+			.clickNavReset {
+				font-weight: 400;
+				color: @greyText;
+			}
+*/
