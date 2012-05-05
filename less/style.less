@@ -138,8 +138,8 @@ body {
 				font-size: 1.3em;
 			}
 		}
-
 	}
+
 	.navBumper {
 		position: relative;
 		top: 80px;
@@ -147,7 +147,7 @@ body {
 		height: 51em;
 		left: 0;	
 		#mainNav {
-			padding-top: 110%;
+			padding-top: 130%;
 
 			li {
 				height: auto;
@@ -158,7 +158,7 @@ body {
 				text-transform: uppercase;
 				font-size: .73em;
 				letter-spacing: .06em;
-				font-weight: 100;
+				font-weight: 400;
 				//margin-left: 30%;
 				padding: 0;
 				margin: 0;
@@ -172,7 +172,7 @@ body {
 				text-decoration: none;
 			}
 			li#about {
-				padding: 20px;
+				padding: 0 0 25px 90px;
 
 				a {
 				color: @greyText;
@@ -189,7 +189,7 @@ body {
 			}
 
 			li#portfolio {
-				padding: 20px;
+				padding: 0 0 15px 90px;
 
 				a {
 					color: @greyText;
@@ -206,16 +206,19 @@ body {
 			}
 
 			li#portfolioDropdownLi {
+				display: none;
 				height: auto;
 				margin: 0;
 				padding: 0;
 
 				ul {
+					height: auto;
+					width: auto;
 					margin: 0;
-					padding: 0;
+					padding-left: 70px;
 					
 					li#books {
-						padding: 20px 0 20px 45px;
+						padding: 0 0 15px 45px;
 
 						a:hover {
 							color:@purpleText;
@@ -224,7 +227,7 @@ body {
 					}
 					
 					li#brochures {
-						padding: 20px 0 20px 45px;
+						padding: 0 0 15px 45px;
 
 						a:hover {
 							color:@orangeText;
@@ -233,7 +236,7 @@ body {
 					}
 
 					li#ephemera {
-						padding: 20px 0 20px 45px;
+						padding: 0 0 10px 45px;
 
 						a:hover {
 							color:@greenText;
@@ -244,7 +247,7 @@ body {
 			} // Portfolio Dropdown LI
 			
 			li#clientList {
-				padding: 20px;
+				padding: 10px 0 0 90px;
 				a:hover {
 					color:@redText;
 					font-weight: 800;
@@ -364,6 +367,118 @@ body {
 		}
 	}
 
+	#booksWrapper {
+		width: 100%;
+
+		.backgroundGrey {
+			height: 275px;
+			background-color: @greyBackground;
+
+			.booksImageWrapper {
+				width: 900px;
+				height: 275px;
+				margin: 0 auto;
+
+				.booksLinkImage1 {
+					float: left;
+					padding: 20px;
+
+					img {
+						height: 124px;
+						width: 151px;
+						margin-top:58px;
+						
+	       				&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        width: 103%;
+					        height: 103%;
+	       				}
+					}
+
+				}
+				.booksLinkImage2 {
+					float: left;
+					padding: 20px;
+
+					img {
+						height: 123px;
+						width: 112px;
+						margin-top: 58px;
+
+						&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        width: 103%;
+					        height: 103%;
+	       				}
+					}
+				}
+				.booksLinkImage3 {
+					float: left;
+					padding: 20px;
+
+					img {
+						height: 161px;
+						width: 110px;
+						margin-top: 39px;
+
+						&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        width: 103%;
+					        height: 103%;
+	       				}
+					}
+				}
+				.booksLinkImage4 {
+					float: left;
+					padding: 20px;
+
+					img {
+						height: 198px;
+						width: 146px;
+						margin-top: 21px;
+
+						&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        width: 103%;
+					        height: 103%;
+	       				}
+					}
+				}
+				.booksLinkImage5 {
+					float: left;
+					padding: 20px;
+
+					img {
+						height: 172px;
+						width: 125px;
+						margin-top: 34px;
+
+						&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        width: 103%;
+					        height: 103%;
+	       				}
+					}
+				}
+			} // booksImageWrapper
+		} // backgroundGrey
+
+		#bookSlideshowWrapper {
+			border: 1px solid red;
+			width: 900px;
+			height: 600px;
+		} 
+	} // books wrapper
 
 
 
