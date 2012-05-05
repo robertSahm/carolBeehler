@@ -3,15 +3,20 @@
 //
 //3... 2.... 1.... BAP!
 
+
+
+
+
+
+
 $(function() { 
 // Load home page image on document load 
 	$('#main').load('home.html').hide().fadeIn(700);
-	$()
 
 	// fades out top-right address on all nav clicks
 	$('.navText a').click(function() {
 			$('.topAddress').fadeOut(700);
-		});
+	});
 
 	//fades out visible divs in #main
 	$('a.headerClick').click(function() {
@@ -126,13 +131,10 @@ $(function() {
 	});
 }); // End Nav clickiness
 
+
 $(function() { 
-	$('a.booksClick1').click(function() {
-		$('#booksSlideshowWrapper').load('sliders/bookSlider1.html')
-	});
-});
-
-
+	
+})
 
 
 
