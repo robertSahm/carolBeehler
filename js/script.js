@@ -1,11 +1,3 @@
-//
-// Gentlemen, start your engines...
-//
-//3... 2.... 1.... BAP!
-
-
-
-
 
 
 
@@ -132,9 +124,7 @@ $(function() {
 }); // End Nav clickiness
 
 
-$(function() { 
-	
-})
+
 
 
 

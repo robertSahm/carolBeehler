@@ -28,7 +28,7 @@ body {
 @greyBackground: #C7C1B7;
 
 /* ===== Fonts ================================================== */
-@font-face {
+/*@font-face {
     font-family: 'MinionProMediumItalic';
     src: url('fonts/minion_pro_medium_italic-webfont.eot');
     src: url('fonts/minion_pro_medium_italic-webfont.eot?#iefix') format('embedded-opentype'),
@@ -37,20 +37,74 @@ body {
     
 }
 @font-face {
-    font-family: 'MinionRegular';
-    src: url('fonts/minion_regular-webfont.eot');
-    src: url('fonts/minion_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/minion_regular-webfont.woff') format('woff'),
-         url('fonts/minion_regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: 'MinionSemiboldItalic';
     src: url('fonts/minion_semibold_italic-webfont.eot');
     src: url('fonts/minion_semibold_italic-webfont.eot?#iefix') format('embedded-opentype'),
          url('fonts/minion_semibold_italic-webfont.woff') format('woff'),
          url('fonts/minion_semibold_italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+@font-face {
+    font-family: 'SabonRegular';
+    src: url('fonts/sabon-roman-webfont.eot');
+    src: url('fonts/fonts/sabon-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sabon-roman-webfont.woff') format('woff'),
+         url('fonts/sabon-roman-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'FrutigerBoldCondensed';
+    src: url('fonts/frutiger_67_bold_condensed-webfont.eot');
+    src: url('fonts/frutiger_67_bold_condensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/frutiger_67_bold_condensed-webfont.woff') format('woff'),
+         url('fonts/frutiger_67_bold_condensed-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'FrutigerSAINRmv.1Roman';
+    src: url('fonts/frutiger_sain_rm_v.1_roman-webfont.eot');
+    src: url('fonts/frutiger_sain_rm_v.1_roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/frutiger_sain_rm_v.1_roman-webfont.woff') format('woff'),
+         url('fonts/frutiger_sain_rm_v.1_roman-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'InterstateRegular';
+    src: url('fonts/interstate-regular-webfont.eot');
+    src: url('fonts/interstate-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/interstate-regular-webfont.woff') format('woff'),
+         url('fonts/interstate-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'InterstateLightRegular';
+    src: url('fonts/interstate-light-webfont.eot');
+    src: url('fonts/interstate-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/interstate-light-webfont.woff') format('woff'),
+         url('fonts/interstate-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'MinionRegular';
+    src: url('fonts/minion_regular-webfont.eot');
+    src: url('fonts/minion_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/minion_regular-webfont.woff') format('woff'),
+         url('fonts/minion_regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -63,13 +117,7 @@ body {
     font-weight: 400;
     font-style: italic;
 }
-
 // Hover and clicked states for jQuery
-
-
-
-
-
 #headerContainer {
 	height: 5em;
 	width: 100%;
@@ -127,7 +175,7 @@ body {
 			margin-left: 9%;
 			max-width: 570px;
 			//min-width: 480px;
-			font-family:  'Helvetica', 'arial', sans-serif;
+			font-family: 'InterstateLightRegular', 'arial', sans-serif;
 			font-size: .67em;
 			letter-spacing: .01em;
 			font-weight: 100;
@@ -148,18 +196,18 @@ body {
 		left: 0;
 		
 		#mainNav {
-			padding-top: 130%;
+			padding-top: 300px;
 
 			li {
 				height: auto;
 				
 			}
 			h3 {
-				font-family:  'Helvetica', 'arial', sans-serif;
+				font-family: 'InterstateLightRegular', 'arial', sans-serif;
 				text-transform: uppercase;
 				font-size: .73em;
 				letter-spacing: .06em;
-				font-weight: 400;
+				font-weight: 100;
 				//margin-left: 30%;
 				padding: 0;
 				margin: 0;
@@ -261,7 +309,7 @@ body {
 
 #mainContainer {
 	#main {
-
+		z-index: 100;
 		// HOME STYLES
 		#homeImageWrapper {
 			float: right;
@@ -378,7 +426,8 @@ body {
 			.booksImageWrapper {
 				width: 900px;
 				height: 275px;
-				margin: 0 auto;
+				margin-left: 0;
+				padding-left: 70px;
 
 				.booksLinkImage1 {
 					float: left;
@@ -474,36 +523,70 @@ body {
 		} // backgroundGrey
 
 		#booksSlideshowWrapper {
-			border: 1px solid red;
-			width: 900px;
-			height: 600px;
+			
+			width: 930px;
+			height: 450px;
 			margin-left: 280px;
+			margin-top: 20px;
 
 			#bookSlider1 {
-				border: 1px solid blue;
-				width: 800px;
+				width: 700px;
 				height: 400px;
 				.switcherWrapper {
 
-
-				}
-				.numberClickWrapper {
-					border: 1px solid green;
-				
-					
 				}
 			}
-
-			.bookSlider2 {
-
+			.sliderText {
+				position: absolute;
+				width: 500px;
+				top: 750px;
+				height: auto;
+				h4 {
+					font-family: 'InterstateRegular', 'arial', sans-serif;
+					font-weight: 400;
+					font-size: .85em;
+					letter-spacing: .03em;
+					padding: 0;
+					margin: 0;
+				}
+				p4 {
+					font-family: 'InterstateLightRegular', 'arial', sans-serif;
+					font-weight: 100;
+					font-size: .75em;
+					letter-spacing: .03em;
+					word-spacing: -.05em;
+					padding: 0;
+					margin: 0;
+				}
 			}
 		} 
 	} // books wrapper
 
+.showcase-button-wrapper {
+	position: absolute;
+	top: 680px;
+	padding-left: 20px;
+	span {
+		font-family: 'InterstateLightRegular', 'arial', sans-serif;
+		padding: 0 3px 0 3px;
+		font-size: .67em;
+
+		&:hover {
+			cursor: pointer;
+			font-weight: bold;
+			color: @purpleText;
+		}
+	}
+}
 
 
+.bookNotSelected {
+	opacity: .2;
 
-
+	&:hover {
+		opacity: 1;
+	}
+}
 
 
 

@@ -1,39 +1,105 @@
+
+<style>
+
+.active {
+	color: #A484BB;
+	font-weight: bold;
+}
+
+.bookNavClick img {
+	opacity: .5;
+	filter:alpha(opacity=50); /* For IE8 and earlier */
+}
+
+a.bookNavClick img:hover {
+	opacity: 1;
+
+}
+
+.booksClick1 img {
+	opacity: 1;
+	-webkit-box-shadow: 0 8px 15px -5px black;
+	-moz-box-shadow: 0 8px 15px -5px black;
+	box-shadow: 0 8px 15px -5px black;
+}
+
+</style>
+
+
+
+
 <div id="bookSlider1">
 	<div class="switcherWrapper">
-		<div class="targetBooks"></div>
-		<div class="indiaImg1">
+
+		<div class="indiaImg1 showcase-slide">
 			<img src="img/indiaSlide1.jpg">
 		</div>
-		<div class="indiaImg2">
+		<div class="indiaImg2 showcase-slide">
 			<img src="img/indiaSlide2.jpg">
 		</div>
-		<div class="indiaImg3">
+		<div class="indiaImg3 showcase-slide">
 			<img src="img/indiaSlide3.jpg">
 		</div>
-		<div class="indiaImg4">
+		<div class="indiaImg4 showcase-slide">
 			<img src="img/indiaSlide4.jpg">
 		</div>
-		<div class="indiaImg5">
+		<div class="indiaImg5 showcase-slide">
 			<img src="img/indiaSlide5.jpg">
 		</div>
 	</div>
-	<div class="numberClickWrapper">
-		<ul class="numberClickUl">
-			<li class="click1">
-				1
-			</li>
-			<li class="click2">
-				2
-			</li>
-			<li class="click3">
-				3
-			</li>
-			<li class="click4">
-				4
-			</li>
-			<li class="click5">
-				5
-			</li>
-		</ul>
-	</div>
 </div>
+
+<div class="sliderText">
+	<h4>India Through the Lens</h4>
+	<p4>Arthur M. Sackler Gallery</p4>
+</div>
+
+
+
+<script>
+
+$(document).ready(function()
+{
+    $(".switcherWrapper").awShowcase(
+    {
+        content_width:  700,
+        content_height: 470,
+        fit_to_parent:			false,
+			auto:					false,
+			interval:				3000,
+			continuous:				false,
+			loading:				true,
+			tooltip_width:			200,
+			tooltip_icon_width:		32,
+			tooltip_icon_height:	32,
+			tooltip_offsetx:		18,
+			tooltip_offsety:		0,
+			arrows:					false,
+			buttons:				true,
+			btn_numbers:			true,
+			keybord_keys:			false,
+			mousetrace:				false, /* Trace x and y coordinates for the mouse */
+			pauseonover:			true,
+			stoponclick:			true,
+			transition:				'fade', /* hslide / vslide / fade */
+			transition_delay:		0,
+			transition_speed:		700,
+			show_caption:			'onload', /* onload / onhover / show */
+			thumbnails:				false,
+			thumbnails_position:	'outside-last', /* outside-last / outside-first / inside-last / inside-first */
+			thumbnails_direction:	'vertical', /* vertical / horizontal */
+			thumbnails_slidex:		0, /* 0 = auto / 1 = slide one thumbnail / 2 = slide two thumbnails / etc. */
+			dynamic_height:			false, /* For dynamic height to work in webkit you need to set the width and height of images in the source. Usually works to only set the dimension of the first slide in the showcase. */
+			speed_change:			false, /* This prevents user from swithing more then one slide at once */
+			viewline:				false, /* If set to true content_width, thumbnails, transition and dynamic_height will be disabled. As for dynamic height you need to set the width and height of images in the source. */
+			fullscreen_width_x:		15,
+			custom_function:		null
+    });
+});
+
+
+
+
+
+
+</script>

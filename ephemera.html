@@ -1,1 +1,77 @@
-<h1>yay, you've gone and loaded ephemera.html</h1>
+<style>
+
+
+
+</style>
+
+
+
+<div id="booksWrapper">
+	<div class="backgroundGrey">
+		<div class="booksImageWrapper">
+			<div class="booksLinkImage1 bookClick">
+				<a class="booksClick1 bookNavClick" href="#">
+					<img src="img/india.jpg" />
+				</a>
+			</div>
+			<div class="booksLinkImage2 bookClick">
+				<a class="booksClick2 bookNavClick" href="#">
+					<img src="img/devi.jpg" />
+				</a>
+			</div>
+			<div class="booksLinkImage3 bookClick">
+				<a class="booksClick3 bookNavClick" href="#">
+					<img src="img/japan.jpg" />
+				</a>
+			</div>
+			<div class="booksLinkImage4 bookClick">
+				<a class="booksClick4 bookNavClick" href="#">
+					<img src="img/blackWomanhood.jpg" />
+				</a>
+			</div>
+			<div class="booksLinkImage5 bookClick">
+				<a class="booksClick5 bookNavClick" href="#">
+					<img src="img/lewis.jpg" />
+				</a>
+			</div>
+		</div><!-- booksImageWrapper -->
+	</div> <!-- backgroundGrey -->
+
+	<div id="booksSlideshowWrapper">
+		<div id="bookSlide1Wrapper">
+
+		</div>	
+		<div id="bookSlide2Wrapper">
+
+		</div>
+		<div id="bookSlide3Wrapper">
+
+		</div>
+		<div id="bookSlide4Wrapper">
+
+		</div>
+		<div id="bookSlide5Wrapper">
+
+		</div>
+	</div> <!-- #bookSlideWrapper
+</div> <!-- #booksWrapper -->
+
+
+<script>
+
+$(function() { 
+
+
+	$('a.booksClick1').click(function() {
+		$('#booksSlideshowWrapper').load('sliders/bookSlider1.html').hide().fadeIn(500);
+		
+
+	});
+});
+
+
+
+
+
+
+</script>
