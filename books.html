@@ -1,6 +1,27 @@
 <style>
+#booksWrapper {
+	z-index: 200;
+}
 
 
+a.portfolioA {
+	font-weight: 800 !important;
+	color: #EE3124 !important;
+}
+
+a.brochuresA:hover {
+	color: #F0902F !important;
+	font-weight: 800 !important;
+}
+a.ephemeraA:hover {
+	color: #8AC749 !important;
+	font-weight: 800 !important;
+}
+
+a.clientListA:hover, a.aboutA:hover {
+	color: #EE3124 !important;
+	font-weight: 800 !important;
+}
 
 </style>
 
@@ -64,9 +85,24 @@ $(function() {
 
 	$('a.booksClick1').click(function() {
 		$('#booksSlideshowWrapper').load('sliders/bookSlider1.html').hide().fadeIn(500);
-		
-
 	});
+	$('a.booksClick2').click(function() {
+		$('#booksSlideshowWrapper').load('sliders/bookSlider2.html').hide().fadeIn(500);
+		//if($('.bookNavClick').css('opacity') === '.2') {
+			//$('.bookNavClick:not(a.booksClick2)').css({
+				//'opacity: .2'
+		//}
+	});
+	$('a.booksClick3').click(function() {
+		$('#booksSlideshowWrapper').load('sliders/bookSlider3.html').hide().fadeIn(500);
+	});
+	$('a.booksClick4').click(function() {
+		$('#booksSlideshowWrapper').load('sliders/bookSlider4.html').hide().fadeIn(500);
+	});
+	$('a.booksClick5').click(function() {
+		$('#booksSlideshowWrapper').load('sliders/bookSlider5.html').hide().fadeIn(500);
+	});
+
 });
 
 

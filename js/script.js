@@ -1,13 +1,14 @@
 
 
 
+
 $(function() { 
 // Load home page image on document load 
-	$('#main').load('home.html').hide().fadeIn(700);
+	$('#main').load('home.html').hide().fadeIn(500);
 
 	// fades out top-right address on all nav clicks
 	$('.navText a').click(function() {
-			$('.topAddress').fadeOut(700);
+			$('.topAddress').fadeOut(500);
 	});
 
 	//fades out visible divs in #main
@@ -16,14 +17,14 @@ $(function() {
 		$('.navClick').css({
 				'font-weight': '400',
 				'color':'#111'
-    		}, 700);
-		$('#main').load('home.html').hide().fadeIn(700);
-		$('.topAddress').delay(700).fadeIn(700);
+    		}, 500);
+		$('#main').load('home.html').hide().fadeIn(500);
+		$('.topAddress').delay(500).fadeIn(500);
 	});
 
 	// About Click Stuff
 	$('a.aboutA').click(function() {
-		$('#main').load('about.html').hide().fadeIn(700);
+		$('#main').load('about.html').hide().fadeIn(500);
 		// Closes portfolio dropdown if open
 		$('li#portfolioDropdownLi').slideUp(400);
 		$(this).css({
@@ -35,13 +36,13 @@ $(function() {
 			$('.navClick:not(a.aboutA)').css({
 				'font-weight': '400',
 				'color':'#111'
-    		}, 700);
+    		}, 500);
 		};
 	});
 
 	// Portfolio Click Stuff
 	$('a.portfolioA').click(function() {
-		$('#main').load('portfolio.html').hide().fadeIn(700);
+		$('#main').load('portfolio.html').hide().fadeIn(500);
 		$('li#portfolioDropdownLi').slideDown(400);
 		$(this).css({
 			'font-weight':'800',
@@ -52,13 +53,13 @@ $(function() {
 			$('.navClick:not(a.portfolioA)').css({
 				'font-weight': '400',
 				'color':'#111'
-    		}, 700);
+    		}, 500);
 		};
 	});
 
 	// Books Click Stuff
 	$('a.booksA').click(function() {
-		$('#main').load('books.html').hide().fadeIn(700);
+		$('#main').load('books.html').hide().fadeIn(500);
 		$(this).css({
 			'font-weight':'800',
 			'color' : '#A484BB'
@@ -74,14 +75,15 @@ $(function() {
 
 	// Brochures Click Stuff
 	$('a.brochuresA').click(function() {
-		$('#main').load('brochures.html').hide().fadeIn(700);
+		$('#main').load('brochures.html').hide().fadeIn(500);
 		$(this).css({
 			'font-weight':'800',
 			'color' : '#F0902F'
 		}).addClass('clicked');
 
+
 		if($(this).css('font-weight') === '800') {
-			$('.navClick:not(a.brochuresA)').css({
+			$('.navClick:not("a.brochuresA")').css({
 				'font-weight': '400',
 				'color':'#111'
     		});
@@ -90,11 +92,16 @@ $(function() {
 
 	// Ephemera Click Stuff
 	$('a.ephemeraA').click(function() {
-		$('#main').load('ephemera.html').hide().fadeIn(700);
+		$('#main').load('ephemera.html').hide().fadeIn(500);
 		$(this).css({
 			'font-weight':'800',
 			'color' : '#8AC749'
 		}).addClass('clicked');
+		$('a.portfolioA').css({
+			'font-weight':'800',
+			'color' : '#EE3124'
+		}).addClass('clicked');
+
 
 		if($(this).css('font-weight') === '800') {
 			$('.navClick:not(a.ephemeraA)').css({
@@ -106,7 +113,7 @@ $(function() {
 
 	// clientList Click Stuff
 	$('a.clientListA').click(function() {
-		$('#main').load('clientList.html').hide().fadeIn(700);
+		$('#main').load('clientList.html').hide().fadeIn(500);
 		// Closes portfolio dropdown if open
 		$('li#portfolioDropdownLi').slideUp(400);
 		$(this).css({
@@ -130,7 +137,6 @@ $(function() {
 
 
 
-
 /*
 	// about hover
 
@@ -139,12 +145,12 @@ $(function() {
 		$(this).addClass('clickNavAbout');
 		alert('hollaatchaboy')
 		//$('.portfolio a, .books a, .brochures a, .ephemera a, .clientList a').addClass('clickNavReset');
-		$('.portfolioDropdown ul').slideUp(700, function(){
+		$('.portfolioDropdown ul').slideUp(500, function(){
 			// end animation
 		});
 
 		// Loads about.html
-		$('#main').load('about.html').hide().fadeIn(700);
+		$('#main').load('about.html').hide().fadeIn(500);
 	});
 
 
@@ -182,8 +188,8 @@ $(function() {
 		$(this).addClass('clickNavPortfolio selected')
 		//$('.about a, .books a, .brochures a, .ephemera a, .clientList a').addClass('clickNavReset');
 		// fades in portfolio.html
-		$('#main').load('portfolio.html').hide().fadeIn(700);
-		$('ul.portfolioDropdown').slideToggle(700, function(){
+		$('#main').load('portfolio.html').hide().fadeIn(500);
+		$('ul.portfolioDropdown').slideToggle(500, function(){
 			// end animation
 		});
 	});
@@ -193,29 +199,29 @@ $(function() {
 		$(this).addClass('selected')
 		if(!$(this).hasClass('selected')).addClass('clickNavBooks');
 		//$('.about a, .portfolio a, .brochures a, .ephemera a, .clientList a').addClass('clickNavReset');
-		$('#main').load('books.html').hide().fadeIn(700);
+		$('#main').load('books.html').hide().fadeIn(500);
 	});
 
 	// brochures click
 	$('.brochures a').click(function() {
 		$(this).addClass('clickNavBrochures selected')
 		//$('.about a, .portfolio a, .books a, .ephemera a, .clientList a').addClass('clickNavReset');
-		$('#main').load('brochures.html').hide().fadeIn(700);
+		$('#main').load('brochures.html').hide().fadeIn(500);
 	});
 
 	// ephemera click
 	$('.ephemera a').click(function() {
 		$(this).addClass('clickNavEphemera selected')
 		//$('.about a, .portfolio a, .books a, brochures a, .clientList a').addClass('clickNavReset');
-		$('#main').load('ephemera.html').hide().fadeIn(700);
+		$('#main').load('ephemera.html').hide().fadeIn(500);
 	});
 
 	// clientList click
 	$('.clientList a').click(function() {
 		$(this).addClass('clickNavClientList selected')
-		$('#main').load('clientList.html').hide().fadeIn(700);
+		$('#main').load('clientList.html').hide().fadeIn(500);
 		//$('.about a, .portfolio a, .books a, brochures a, .ephemera a').addClass('clickNavReset');
-		$('.portfolioDropdown ul').slideUp(700, function(){
+		$('.portfolioDropdown ul').slideUp(500, function(){
 			// end animation
 		});
 	});

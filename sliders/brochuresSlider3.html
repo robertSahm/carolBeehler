@@ -1,50 +1,73 @@
 
 <style>
 .active {
-	color: #A484BB;
+	color: #F0902F;
 	font-weight: bold;
 }
 
-.bookNavClick img {
+.brochuresNavClick img {
 	opacity: .5;
 	filter:alpha(opacity=50); /* For IE8 and earlier */
 }
 
-a.bookNavClick img:hover {
+a.brochuresNavClick img:hover {
 	opacity: 1;
 
 }
 
-.booksClick1 img {
+.brochuresClick3 img {
 	opacity: 1;
 	-webkit-box-shadow: 0 8px 15px -5px black;
 	-moz-box-shadow: 0 8px 15px -5px black;
 	box-shadow: 0 8px 15px -5px black;
 }
+
+.showcase-button-wrapper {
+	top: 660px;
+	left: 260px;
+	color: black;
+	font-weight: 800;
+	position: absolute;
+}
+
+.showcase-button-wrapper span {
+	font-family: 'InterstateLightRegular', 'arial', sans-serif;
+	padding: 0 3px 0 3px;
+	font-size: .67em;
+}
+
+.showcase-button-wrapper span:hover {
+	color: #F0902F;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.sliderText {
+	width: 405px;
+	left: 280px;
+	top: 700px;
+}
+
 </style>
 
-<div id="bookSlider1">
+<div id="brochuresSlider3">
 	<div class="switcherWrapper">
-		<div class="indiaImg1 showcase-slide">
-			<img src="img/indiaSlide1.jpg">
+		<div class="brochuresImg1 showcase-slide">
+			<img src="img/petsSlide1.jpg">
 		</div>
-		<div class="indiaImg2 showcase-slide">
-			<img src="img/indiaSlide2.jpg">
-		</div>
-		<div class="indiaImg3 showcase-slide">
-			<img src="img/indiaSlide3.jpg">
-		</div>
-		<div class="indiaImg4 showcase-slide">
-			<img src="img/indiaSlide4.jpg">
-		</div>
-		<div class="indiaImg5 showcase-slide">
-			<img src="img/indiaSlide5.jpg">
+		<div class="brochuresImg2 showcase-slide">
+			<img src="img/petsSlide2.jpg">
 		</div>
 	</div>
 </div>
+
 <div class="sliderText">
-	<h4>India Through the Lens</h4>
-	<p4>Arthur M. Sackler Gallery</p4>
+	 <h4>
+	 	32-page exhibition brochure
+	</h4>
+	<p4>
+		White House Historical Association
+	</p4> 
 </div>
 
 
@@ -55,7 +78,7 @@ $(document).ready(function()
 {
     $(".switcherWrapper").awShowcase(
     {
-        content_width:  700,
+        content_width:  930,
         content_height: 470,
         fit_to_parent:			false,
 			auto:					false,
@@ -89,10 +112,6 @@ $(document).ready(function()
 			custom_function:		null
     });
 });
-
-
-
-
 
 
 </script>

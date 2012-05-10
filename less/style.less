@@ -1,10 +1,10 @@
 @import "normalize.less";
 
 a { text-decoration: none; }
-a:visited {  }
-a:hover { cursor: pointer; }
-a:focus {  }
-a:hover, a:active { outline: 0; }
+a:visited { outline: 0; border: 0; }
+a:hover { cursor: pointer; outline: 0; border: 0;}
+a:focus { outline: 0; border: 0; }
+a:hover, a:active { outline: 0; border: 0;}
 //@import "global-mobile.less";
 
 .noWrap {
@@ -187,20 +187,21 @@ body {
 			}
 		}
 	}
-	nav{z-index: -100;}
+	nav {
+		
+	}
+
 	.navBumper {
-		position: relative;
-		top: 80px;
+		position: absolute;
+		top: 400px;
 		width: 200px;
-		height: 51em;
+		height: 200px;
 		left: 0;
 		
 		#mainNav {
-			padding-top: 300px;
-
+			
 			li {
 				height: auto;
-				
 			}
 			h3 {
 				font-family: 'InterstateLightRegular', 'arial', sans-serif;
@@ -211,14 +212,12 @@ body {
 				//margin-left: 30%;
 				padding: 0;
 				margin: 0;
+				
 			}
 			a {
-				color: @greyText;
-			 	-webkit-transition:color .2s linear;  
-			 	-moz-transition:color .2s linear;  
-			 	-o-transition:color .2s linear;  
-			 	transition:color .2s linear;   
-				text-decoration: none;
+ 
+				
+				
 			}
 			li#about {
 				padding: 0 0 25px 90px;
@@ -269,16 +268,24 @@ body {
 					li#books {
 						padding: 0 0 15px 45px;
 
-						a:hover {
+						a.booksA {
+							color: @greyText;
+							-webkit-transition:color .2s linear;  
+							-moz-transition:color .2s linear;  
+							-o-transition:color .2s linear;  
+							transition:color .2s linear;
+
+							&:hover {
 							color:@purpleText;
 							font-weight: 800;
+							}
 						}
 					}
 					
 					li#brochures {
 						padding: 0 0 15px 45px;
 
-						a:hover {
+						&:hover {
 							color:@orangeText;
 							font-weight: 800;
 						}
@@ -287,7 +294,7 @@ body {
 					li#ephemera {
 						padding: 0 0 10px 45px;
 
-						a:hover {
+						&:hover {
 							color:@greenText;
 							font-weight: 800;
 						}
@@ -297,10 +304,20 @@ body {
 			
 			li#clientList {
 				padding: 10px 0 0 90px;
-				a:hover {
-					color:@redText;
-					font-weight: 800;
-				}
+				
+				a {
+					color: @greyText;
+					-webkit-transition:color .2s linear;  
+					-moz-transition:color .2s linear;  
+					-o-transition:color .2s linear;  
+					transition:color .2s linear;
+
+
+					&:hover {
+						color:@redText;
+						font-weight: 800;
+					}
+				}	
 			}
 		}
 	} // Nav Bumper
@@ -309,7 +326,7 @@ body {
 
 #mainContainer {
 	#main {
-		z-index: 100;
+		
 		// HOME STYLES
 		#homeImageWrapper {
 			float: right;
@@ -418,16 +435,19 @@ body {
 
 	#booksWrapper {
 		width: 100%;
-
+		z-index: 1000;
 		.backgroundGrey {
 			height: 275px;
 			background-color: @greyBackground;
+			z-index: 1000;
 
 			.booksImageWrapper {
+				position: absolute;
 				width: 900px;
 				height: 275px;
 				margin-left: 0;
-				padding-left: 70px;
+				padding-left: 0;
+				left: 183px;
 
 				.booksLinkImage1 {
 					float: left;
@@ -442,8 +462,8 @@ body {
 					-webkit-box-shadow: 0 8px 15px -5px black;
 					   -moz-box-shadow: 0 8px 15px -5px black;
 					        box-shadow: 0 8px 15px -5px black;
-					        width: 103%;
-					        height: 103%;
+					        //width: 103%;
+					        //height: 103%;
 	       				}
 					}
 				}
@@ -460,8 +480,8 @@ body {
 					-webkit-box-shadow: 0 8px 15px -5px black;
 					   -moz-box-shadow: 0 8px 15px -5px black;
 					        box-shadow: 0 8px 15px -5px black;
-					        width: 103%;
-					        height: 103%;
+					        //width: 103%;
+					        //height: 103%;
 	       				}
 					}
 				}
@@ -478,8 +498,8 @@ body {
 					-webkit-box-shadow: 0 8px 15px -5px black;
 					   -moz-box-shadow: 0 8px 15px -5px black;
 					        box-shadow: 0 8px 15px -5px black;
-					        width: 103%;
-					        height: 103%;
+					        //width: 103%;
+					        //height: 103%;
 	       				}
 					}
 				}
@@ -496,8 +516,8 @@ body {
 					-webkit-box-shadow: 0 8px 15px -5px black;
 					   -moz-box-shadow: 0 8px 15px -5px black;
 					        box-shadow: 0 8px 15px -5px black;
-					        width: 103%;
-					        height: 103%;
+					        //width: 103%;
+					        //height: 103%;
 	       				}
 					}
 				}
@@ -514,8 +534,8 @@ body {
 					-webkit-box-shadow: 0 8px 15px -5px black;
 					   -moz-box-shadow: 0 8px 15px -5px black;
 					        box-shadow: 0 8px 15px -5px black;
-					        width: 103%;
-					        height: 103%;
+					        //width: 103%;
+					        //height: 103%;
 	       				}
 					}
 				}
@@ -523,7 +543,6 @@ body {
 		} // backgroundGrey
 
 		#booksSlideshowWrapper {
-			
 			width: 930px;
 			height: 450px;
 			margin-left: 280px;
@@ -562,6 +581,330 @@ body {
 		} 
 	} // books wrapper
 
+// START BROCHURES
+
+	#brochuresWrapper {
+		width: 100%;
+		z-index: 1000;
+
+		.backgroundGrey {
+			height: 275px;
+			background-color: @greyBackground;
+			z-index: 1000;
+
+			.brochuresImageWrapper {
+				width: 980px;
+				height: 275px;
+				margin-left: 0;
+				padding-left: 0;
+				position: relative;
+				left: 158px;
+
+				.brochuresLinkImage1 {
+					float: left;
+					padding: 20px;
+
+					img {
+						height: 194px;
+						width: 149px;
+						margin-top:20px;
+						
+	       				&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        //width: 103%;
+					        //height: 103%;
+	       				}
+					}
+				}
+				.brochuresLinkImage2 {
+					float: left;
+					padding: 20px;
+
+					img {
+						height: 187px;
+						width: 127px;
+						margin-top: 24px;
+
+						&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        //width: 103%;
+					        //height: 103%;
+	       				}
+					}
+				}
+				.brochuresLinkImage3 {
+					float: left;
+					padding: 20px;
+
+					img {
+						height: 178px;
+						width: 176px;
+						margin-top: 28px;
+
+						&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        //width: 103%;
+					        //height: 103%;
+	       				}
+					}
+				}
+				.brochuresLinkImage4 {
+					float: left;
+					padding: 20px;
+
+					img {
+						height: 120px;
+						width: 280px;
+						margin-top: 59px;
+
+						&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        //width: 103%;
+					        //height: 103%;
+	       				}
+					}
+				}
+				
+			} // BROCHURES ImageWrapper
+		} // backgroundGrey
+
+		#brochuresSlideshowWrapper {
+			width: 930px;
+			height: 450px;
+			margin-left: 280px;
+			margin-top: 20px;
+
+			#brochuresSlider1 {
+				width: 700px;
+				height: 450px;
+
+				.switcherWrapper {
+
+				}
+			}
+			.sliderText {
+				position: absolute;
+				width: 500px;
+				
+				height: auto;
+				h4 {
+					font-family: 'InterstateRegular', 'arial', sans-serif;
+					font-weight: 400;
+					font-size: .75em;
+					letter-spacing: .03em;
+					padding: 0;
+					margin: 0;
+					line-height: 1.5em;
+				}
+				p4 {
+					font-family: 'InterstateLightRegular', 'arial', sans-serif;
+					font-weight: 400;
+					font-size: .75em;
+					letter-spacing: .03em;
+					word-spacing: -.05em;
+					padding: 0;
+					padding-top: 3px;
+					margin: 0;
+				}
+			}
+		} 
+	}
+
+// Ephemera section
+
+	#ephemeraWrapper {
+		width: 100%;
+		z-index: 1000;
+
+		.backgroundGrey {
+			height: 275px;
+			background-color: @greyBackground;
+			z-index: 1000;
+
+			.ephemeraImageWrapper {
+				width: 980px;
+				height: 275px;
+				margin-left: 0;
+				padding-left: 0;
+				position: relative;
+				left: 220px;
+
+				.ephemeraLinkImage1 {
+					float: left;
+					padding: 20px;
+
+					img {
+						height: 175px;
+						width: 177px;
+						margin-top:28px;
+						
+	       				&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        //width: 103%;
+					        //height: 103%;
+	       				}
+					}
+				}
+				.ephemeraLinkImage2 {
+					float: left;
+					padding: 25px;
+
+					img {
+						height: 145px;
+						width: 83px;
+						margin-top: 40px;
+
+						&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        //width: 103%;
+					        //height: 103%;
+	       				}
+					}
+				}
+				.ephemeraLinkImage3 {
+					float: left;
+					padding: 25px;
+
+					img {
+						height: 181px;
+						width: 139px;
+						margin-top: 21px;
+
+						&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        //width: 103%;
+					        //height: 103%;
+	       				}
+					}
+				}
+				.ephemeraLinkImage4 {
+					float: left;
+					padding: 25px;
+
+					img {
+						height: 149px;
+						width: 206px;
+						margin-top: 38px;
+
+						&:hover {
+					-webkit-box-shadow: 0 8px 15px -5px black;
+					   -moz-box-shadow: 0 8px 15px -5px black;
+					        box-shadow: 0 8px 15px -5px black;
+					        //width: 103%;
+					        //height: 103%;
+	       				}
+					}
+				}
+				
+			} // ephemera ImageWrapper
+		} // backgroundGrey
+
+		#ephemeraSlideshowWrapper {
+			width: 930px;
+			height: 450px;
+			margin-left: 280px;
+			margin-top: 20px;
+
+
+			#ephemeraSlider1 {
+				width: 700px;
+				height: 450px;
+
+				.switcherWrapper {
+
+				}
+			}
+			.sliderText {
+				position: absolute;
+				width: 500px;
+				height: auto;
+
+				h4 {
+					font-family: 'InterstateRegular', 'arial', sans-serif;
+					font-weight: 400;
+					font-size: .75em;
+					letter-spacing: .03em;
+					padding: 0;
+					margin: 0;
+					line-height: 1.5em;
+				}
+				p4 {
+					font-family: 'InterstateLightRegular', 'arial', sans-serif;
+					font-weight: 400;
+					font-size: .75em;
+					letter-spacing: .03em;
+					word-spacing: -.05em;
+					padding: 0;
+					padding-top: 3px;
+					margin: 0;
+				}
+			}
+
+			#ephemeraSlide1Wrapper {
+
+				.sliderText {
+					top: 600px;
+				}
+			}
+			#ephemeraSlide2Wrapper {
+
+				.sliderText {
+					top: 714px;
+				}
+			}
+			#ephemeraSlide3Wrapper {
+
+				.sliderText {
+					top: 700px;
+				}
+			}
+			#ephemeraSlide4Wrapper {
+
+				.sliderText {
+					top: 625px;
+				}
+			}
+		} 
+	}
+
+// clientList Wrapper
+	#clientListWrapper {
+		width: 1210px;
+		height: 250px;
+		
+		p1 {
+			color: @greyText;
+			font-family: 'MinionRegular', serif; 
+			font-size: .95em;	
+			line-height: 1.35em;
+		}
+
+		p1.firstColumn {
+			float: left;
+			margin: 40px 40px 0 250px;
+		}
+		p1.secondColumn {
+			float: left;
+			margin: 40px 0px 0px 0px;
+		}
+	}	
+	
+
+
 .showcase-button-wrapper {
 	position: absolute;
 	top: 680px;
@@ -579,15 +922,12 @@ body {
 	}
 }
 
-
-.bookNotSelected {
-	opacity: .2;
-
-	&:hover {
-		opacity: 1;
-	}
-}
-
+//.bookNotSelected {
+//	opacity: .2;
+//
+//	&:hover {
+//	}
+//
 
 
 
