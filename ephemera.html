@@ -110,12 +110,15 @@ $(function() {
 		$('#ephemeraSlide1Wrapper, #ephemeraSlide2Wrapper, #ephemeraSlide4Wrapper').hide();
 		$('.ephemeraLinkImage1, .ephemeraLinkImage2, .ephemeraLinkImage4').css('opacity', '0.5');
 		$('.ephemeraLinkImage3').css('opacity','1');
+
 	});
 	$('a.ephemeraClick4').click(function() {
 		$('#ephemeraSlide4Wrapper').fadeIn(500);
 		$('#ephemeraSlide1Wrapper, #ephemeraSlide2Wrapper, #ephemeraSlide3Wrapper').hide();
 		$('.ephemeraLinkImage1, .ephemeraLinkImage2, .ephemeraLinkImage3').css('opacity', '0.5');
+		$('.ephemeraLinkImage1, .ephemeraLinkImage2, .ephemeraLinkImage3').css('filter', 'alpha(opacity=50)');
 		$('.ephemeraLinkImage4').css('opacity','1');
+		
 	});
 });
 
