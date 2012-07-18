@@ -8,7 +8,7 @@ $(function() {
 
 	// fades out top-right address on all nav clicks
 	$('.navText a').click(function() {
-			$('.topAddress').fadeOut(500);
+		$('.topAddress').fadeOut(500);
 	});
 
 	//fades out visible divs in #main
