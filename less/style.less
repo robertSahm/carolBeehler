@@ -43,6 +43,17 @@ body {
 }
 
 @font-face {
+    font-family: 'MinionPro-Semibold';
+    src: url('fonts/MinionPro-Semibold.eot');
+    src: url('fonts/MinionPro-Semibold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/MinionPro-Semibold.woff') format('woff'),
+         url('fonts/MinionPro-Semibold.ttf') format('truetype'),
+         url('fonts/MinionPro-Semibold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'MinionDisplayRomanItalic';
     src: url('fonts/miniondisplayitalic-webfont.eot');
     src: url('fonts/miniondisplayitalic-webfont.eot?#iefix') format('embedded-opentype'),
@@ -86,6 +97,7 @@ body {
 }
 
 
+
 .caps {
 	text-transform: uppercase;
 	/*
@@ -110,10 +122,10 @@ body {
 
 		h1 {
 			float: left;
-			font-family: 'MinionRegular';
-			font-weight: 500;
+			font-family: "MinionPro-Semibold", serif;
+			font-weight: 100;
 			font-size: 1.15em;
-			letter-spacing: .12em;
+			letter-spacing: .06em;
 			word-spacing: .1em;
 			text-transform: uppercase;
 			color: @redText;
@@ -122,6 +134,10 @@ body {
 
 			a {
 				color: @redText;
+
+				span {
+					letter-spacing: .08em;
+				}
 			}
 		}
 
@@ -668,7 +684,7 @@ body {
 					        box-shadow: 0 8px 15px -5px black;
 					        //width: 103%;
 					        //height: 103%;
-	       				}
+	       		}
 					}
 				}
 				.brochuresLinkImage3 {
@@ -686,7 +702,7 @@ body {
 					        box-shadow: 0 8px 15px -5px black;
 					        //width: 103%;
 					        //height: 103%;
-	       				}
+	       		}
 					}
 				}
 				.brochuresLinkImage4 {
@@ -704,10 +720,9 @@ body {
 					        box-shadow: 0 8px 15px -5px black;
 					        //width: 103%;
 					        //height: 103%;
-	       				}
+	       		}
 					}
 				}
-				
 			} // BROCHURES ImageWrapper
 		} // backgroundGrey
 
