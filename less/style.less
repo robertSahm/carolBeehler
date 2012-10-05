@@ -86,7 +86,7 @@ body {
 }
 
 
-.smallCaps {
+.caps {
 	text-transform: uppercase;
 	/*
 	font-family: 'serif';
@@ -405,10 +405,9 @@ body {
 			border-right: 1px solid @redText;
 
 			img {
-				height: 198px;
-				width: 146px;
+				height: 227px;
 				padding-left: 127px;
-				padding-top: 39px;
+				padding-top: 24px;
 			}
 		}
 
@@ -419,8 +418,9 @@ body {
 			border-right: 1px solid @redText;
 
 			img {
+				height: 204px;
 				padding-left: 138px;
-				padding-top: 46px;
+				padding-top: 37px;
 			}
 		}
 
@@ -428,9 +428,11 @@ body {
 			float: left;
 			height: 275px;
 			width: 400px;
+
 				img {
-					padding-top: 88px;
-					padding-left: 72px;
+					height:104px;
+					padding-top: 86px;
+					padding-left: 61px;
 				}
 			}
 		}
@@ -448,38 +450,41 @@ body {
                                                
 
 	#booksWrapper {
+		//position: relative;
 		width: 100%;
-		z-index: 1000;
+		z-index: -1000;
 
 		.backgroundGrey {
+			position: relative;
 			height: 275px;
 			background-color: @greyBackground;
 			z-index: 1000;
 
 			.booksImageWrapper {
-				position: absolute;
-				width: 900px;
+				position: relative;
+				width: 90%;
 				height: 275px;
-				margin-left: 0;
+				margin: 0 auto;
 				padding-left: 0;
-				left: 183px;
+				//left: 183px;
 
 				.booksLinkImage1 {
+					margin-left: 46px;
 					float: left;
 					padding: 20px;
 
 					img {
-						height: 124px;
-						width: 151px;
-						margin-top:58px;
+						height: 162px;
+						//width: 151px;
+						margin-top:39px;
 						
-	       				&:hover {
+	       		&:hover {
 					-webkit-box-shadow: 0 8px 15px -5px black;
 					   -moz-box-shadow: 0 8px 15px -5px black;
 					        box-shadow: 0 8px 15px -5px black;
 					        //width: 103%;
 					        //height: 103%;
-	       				}
+	       		}
 					}
 				}
 				.booksLinkImage2 {
@@ -487,9 +492,9 @@ body {
 					padding: 20px;
 
 					img {
-						height: 123px;
-						width: 112px;
-						margin-top: 58px;
+						height: 178px;
+						//width: 112px;
+						margin-top: 29px;
 
 						&:hover {
 					-webkit-box-shadow: 0 8px 15px -5px black;
@@ -505,9 +510,9 @@ body {
 					padding: 20px;
 
 					img {
-						height: 161px;
-						width: 110px;
-						margin-top: 39px;
+						height: 215px;
+						//width: 110px;
+						margin-top: 12px;
 
 						&:hover {
 					-webkit-box-shadow: 0 8px 15px -5px black;
@@ -541,9 +546,9 @@ body {
 					padding: 20px;
 
 					img {
-						height: 172px;
-						width: 125px;
-						margin-top: 34px;
+						height: 198px;
+						width: 146px;
+						margin-top: 21px;
 
 						&:hover {
 					-webkit-box-shadow: 0 8px 15px -5px black;
